@@ -2,7 +2,7 @@
    Zelala Design Studio — content & i18n
    - SITE: contact + site config (PLACEHOLDER values — owner fills)
    - I18N: UI strings (AR/EN)
-   - PROJECTS: portfolio data (PLACEHOLDER imagery + sample copy)
+   - PROJECTS: real portfolio data
    ========================================================= */
 
 window.SITE = {
@@ -69,11 +69,11 @@ window.I18N = {
 
   'stat.years.n':    { ar: '٠٧', en: '07' },
   'stat.years.l':    { ar: 'سنواتٌ من التصميم', en: 'YEARS DESIGNING' },
-  'stat.projects.n': { ar: '٤٢', en: '42' },
-  'stat.projects.l': { ar: 'مشروعٌ مُكتمل',     en: 'PROJECTS COMPLETED' },
-  'stat.area.n':     { ar: '١٨٬٠٠٠', en: '18,000' },
+  'stat.projects.n': { ar: '١٠', en: '10' },
+  'stat.projects.l': { ar: 'مشاريعُ هذه الدفعة', en: 'PROJECTS IN THIS RELEASE' },
+  'stat.area.n':     { ar: '٢٬٥٠٠', en: '2,500' },
   'stat.area.l':     { ar: 'مترٌ مربّع مُصمَّم', en: 'SQ. METRES DELIVERED' },
-  'stat.cities.n':   { ar: '٠٤', en: '04' },
+  'stat.cities.n':   { ar: '٠٣', en: '03' },
   'stat.cities.l':   { ar: 'مدنٌ سعودية',        en: 'SAUDI CITIES' },
 
   /* projects */
@@ -193,261 +193,354 @@ window.I18N = {
   'case.areaUnit':  { ar: 'م²',       en: 'm²' }
 };
 
+/* ---------- helpers used below to keep entries readable ---------- */
+function _gal(slug, count){
+  const arr = [];
+  for (let i = 2; i <= count; i++) {
+    arr.push(`assets/images/projects/${slug}/${String(i).padStart(2,'0')}.webp`);
+  }
+  return arr;
+}
+
 window.PROJECTS = [
+
+  /* 01 ============================================================ */
   {
-    slug: 'villa-al-narjis',
+    slug: 'japandi-kitchen',
     type: 'residential',
-    cover: 'assets/images/projects/villa-al-narjis.svg',
-    gallery: [],
-    title:    { ar: 'فيلا النرجس',      en: 'Villa Al-Narjis' },
+    cover: 'assets/images/projects/japandi-kitchen/01.webp',
+    gallery: _gal('japandi-kitchen', 4),
+    title:    { ar: 'مطبخ «جابانديّ» وغرفة طعام', en: 'Japandi Kitchen & Dining' },
     location: { ar: 'الرياض', en: 'Riyadh' },
-    year: '٢٠٢٥/2025',
-    area: { ar: '٧٢٠', en: '720' },
-    scope:    { ar: 'تصميم كامل + إشراف', en: 'Full design + supervision' },
-    brief:    {
-      ar: 'فيلا عائلية في شمالِ الرياض — البريفُ طلبَ بيتاً هادئاً معاصراً يبقى محتفظاً بثقلِ تجمّعات العائلة.',
-      en: 'A family villa in north Riyadh — the brief asked for a calm, contemporary home that still carries the weight of family gatherings.'
+    year:     '٢٠٢٥/2025',
+    area:     { ar: '٩٥', en: '95' },
+    scope:    { ar: 'مطبخ + ركن طعام', en: 'Kitchen + dining nook' },
+    brief: {
+      ar: 'مطبخ يجمع هدوءَ اليابان وحرفيّةَ الإسكندنافيّين — نظيف، دافئ، بلا زخرفة.',
+      en: 'A kitchen blending Japanese stillness with Scandinavian craft — clean, warm, ornament-free.'
     },
-    concept:  {
+    concept: {
       ar: [
-        'ثبّتنا التخطيطَ حول مجلسٍ مزدوجِ الارتفاع يفتح على نافذةٍ علويّةٍ واحدة — الضوءُ ينحتُ الغرفةَ على مدارِ اليوم.',
-        'أرضيّاتٌ من الترافرتين الدافئ، نجارةُ جوزٍ بنغمةٍ غامقة، وجدرانٌ بجصٍّ جيريٍّ ناعم. درامةٌ هادئة لا تُنافسُ العائلة.'
+        'ركّزنا على خطٍّ أفقيٍّ طويلٍ من البلوط الفاتح وسطحٍ من الترافرتين، وأخفينا كلَّ الأجهزة وراء أبواب بلا مقابض.',
+        'الضوءُ ينطلقُ من شريطٍ واحدٍ فوق الجزيرة، فتتولّى الخامةُ بقيّةَ الحديث.'
       ],
       en: [
-        'We anchored the plan around a double-height majlis lit by a single high opening — light carves the room across the day.',
-        'Warm travertine floors, dark walnut joinery, lime-plaster walls. Quiet drama that does not compete with the family.'
+        'A long horizontal line of pale oak and a travertine countertop; every appliance hidden behind handle-less doors.',
+        'Light emerges from a single strip above the island — the materials carry the rest of the conversation.'
       ]
     },
-    materials:[
+    materials: [
+      { ar:'بلوط فاتح', en:'Pale oak' },
       { ar:'ترافرتين', en:'Travertine' },
-      { ar:'جوز', en:'Walnut' },
       { ar:'جصّ جيري', en:'Lime plaster' },
       { ar:'نحاس مفروش', en:'Brushed brass' },
       { ar:'كتّان', en:'Linen' }
     ]
   },
+
+  /* 02 ============================================================ */
   {
-    slug: 'skyline-penthouse',
+    slug: 'warm-minimalist-apartments',
     type: 'residential',
-    cover: 'assets/images/projects/penthouse-skyline.svg',
-    gallery: [],
-    title:    { ar: 'بنتهاوس الأفق',    en: 'Skyline Penthouse' },
-    location: { ar: 'جدة', en: 'Jeddah' },
-    year: '٢٠٢٤/2024',
-    area: { ar: '٣٨٠', en: '380' },
-    scope:    { ar: 'إعادة تصميم + أثاث', en: 'Redesign + furnishings' },
-    brief:    {
-      ar: 'بنتهاوسٌ ساحليٌّ بإطلالةٍ تفرضُ الانضباط — كلُّ قرارٍ هنا يجبُ ألاّ يسرقَ نظرَ البحر.',
-      en: 'A coastal penthouse with a view that demanded restraint — no decision could steal the sea.'
+    cover: 'assets/images/projects/warm-minimalist-apartments/01.webp',
+    gallery: _gal('warm-minimalist-apartments', 11),
+    title:    { ar: 'شقّتان دافئتان مينيمال', en: 'Warm Minimalist Apartments' },
+    location: { ar: 'جدّة', en: 'Jeddah' },
+    year:     '٢٠٢٥/2025',
+    area:     { ar: '٢٤٠', en: '240' },
+    scope:    { ar: 'تصميم كامل لشقّتين متجاورتين', en: 'Full design — two adjacent apartments' },
+    brief: {
+      ar: 'شقّتان متجاورتان لعميلين مختلفين — التحدّي: مينيمال بدون برودة.',
+      en: 'Two adjacent apartments for two different clients — the challenge: minimal without cold.'
     },
-    concept:  {
+    concept: {
       ar: [
-        'أرجعنا كلَّ جدارٍ خطوةً للخلف، وفتحنا الواجهةَ على الأفق بزجاجٍ ممتدٍّ من الأرض حتى السقف، وخفضنا جلسةَ المعيشةِ في حوضٍ هادئ.',
-        'الخاماتُ كلُّها فاتحة — حجرٌ رملي، بلوطٌ مُبيَّض، حريرٌ خام — كي تبقى السماءُ هي البطل.'
+        'أوقفنا الجدران عند الضرورة فقط، ثم تركنا لوحةً من الكتّان والبلوط والجصّ الطينيّ تتكرّر في كل غرفة.',
+        'الإضاءةُ على مستوى واطئٍ تحدّد الجلسات وتُبقي السقفَ يتنفّس. كلُّ قطعةِ أثاثٍ تختارُ مكانها.'
       ],
       en: [
-        'Every wall was pushed back to the sea — full-height glass on the view, a sunken seating well at the centre.',
-        'Materials kept pale — sandstone, bleached oak, raw silk — so the sky stays the protagonist.'
+        'Walls stop only where they must; a palette of linen, oak and clay-toned plaster repeats across every room.',
+        'Low-level lighting defines the seating; the ceilings stay open. Every piece of furniture chooses its own place.'
       ]
     },
-    materials:[
-      { ar:'حجر رملي', en:'Sandstone' },
-      { ar:'بلوط مُبيَّض', en:'Bleached oak' },
-      { ar:'حرير خام', en:'Raw silk' },
-      { ar:'جصّ مصقول', en:'Polished plaster' },
-      { ar:'فولاذ مؤكسد', en:'Oxidised steel' }
-    ]
-  },
-  {
-    slug: 'wadi-headquarters',
-    type: 'commercial',
-    cover: 'assets/images/projects/headquarters-office.svg',
-    gallery: [],
-    title:    { ar: 'مقرّ وادي',         en: 'Wadi Headquarters' },
-    location: { ar: 'الرياض', en: 'Riyadh' },
-    year: '٢٠٢٥/2025',
-    area: { ar: '١٬٢٠٠', en: '1,200' },
-    scope:    { ar: 'تصميم كامل', en: 'Full design package' },
-    brief:    {
-      ar: 'مقرٌّ لشركةِ تقنيةٍ صاعدة — يلزمُ أن يُقرَأ كثقةٍ جادّةٍ دون أن يقعَ في برودةِ الشركات.',
-      en: 'HQ for a growing tech firm — needed to read as serious and confident without falling into corporate cold.'
-    },
-    concept:  {
-      ar: [
-        'سقفٌ مَدَدٌ من شرائحِ الخشب يمتدُّ من المنطقةِ المفتوحةِ إلى غرفِ الاجتماعات، وآبارُ ضوءٍ علوية تنقّط الفراغ.',
-        'لوحةٌ من المحايداتِ الدافئة مع جدارٍ مُرسٍ بأخضرَ غامق. اللبدُ الصوتي يخفّفُ صخبَ الخطّة المفتوحة.'
-      ],
-      en: [
-        'A long timber-slat ceiling sweeps from the open floor into the meeting rooms; skylight wells punctuate the plan.',
-        'Warm neutrals with a dark anchor wall in burnished green. Acoustic felt softens the open plan.'
-      ]
-    },
-    materials:[
-      { ar:'بلوط مدبوغ', en:'Stained oak' },
-      { ar:'لبد صوفي', en:'Wool felt' },
-      { ar:'تيرازو', en:'Terrazzo' },
-      { ar:'فولاذ مُقَتَّم', en:'Blackened steel' },
-      { ar:'إنارة بعجين الورق', en:'Paper-pulp lighting' }
-    ]
-  },
-  {
-    slug: 'boutique-marqueb',
-    type: 'commercial',
-    cover: 'assets/images/projects/boutique-flagship.svg',
-    gallery: [],
-    title:    { ar: 'بوتيك مَركَب',       en: 'Boutique Marqueb' },
-    location: { ar: 'الرياض', en: 'Riyadh' },
-    year: '٢٠٢٤/2024',
-    area: { ar: '٢٦٠', en: '260' },
-    scope:    { ar: 'بوتيك + هوية مكانية', en: 'Boutique + spatial identity' },
-    brief:    {
-      ar: 'متجرٌ رئيسي لعلامةِ أزياءٍ سعودية — يلزمُ أن يُحَسَّ كصالةِ عرضٍ خاصّةٍ لا كمتجر.',
-      en: 'A flagship for a Saudi fashion label — it needed to feel like a private gallery rather than a store.'
-    },
-    concept:  {
-      ar: [
-        'ثلاثُ كوّاتٍ مُضاءة تستضيفُ المجموعةَ كأنّها منحوتات. مُعلَّقةٌ واحدةٌ تحملُ الضوءَ نحو الغرفة.',
-        'أرضيّاتٌ من ترافرتين فاتح، جدرانٌ بجصٍّ جيري، وقضيبٌ نحاسيٌّ يلفُّ المحيطَ كخطٍّ هادٍ للعين.'
-      ],
-      en: [
-        'Three lit niches stage the collection like sculpture; a single pendant draws light into the room.',
-        'Pale travertine floors, lime-plaster walls, and a brass picture-rail tying the perimeter.'
-      ]
-    },
-    materials:[
-      { ar:'ترافرتين فاتح', en:'Pale travertine' },
-      { ar:'جصّ جيري', en:'Lime plaster' },
-      { ar:'نحاس مفروش', en:'Brushed brass' },
-      { ar:'بلوط', en:'Oak' },
-      { ar:'بلوط مُدخَّن', en:'Smoked oak' }
-    ]
-  },
-  {
-    slug: 'rawasi-restaurant',
-    type: 'hospitality',
-    cover: 'assets/images/projects/restaurant-hospitality.svg',
-    gallery: [],
-    title:    { ar: 'مطعم رواسي',         en: 'Rawasi Restaurant' },
-    location: { ar: 'الخبر', en: 'Al Khobar' },
-    year: '٢٠٢٥/2025',
-    area: { ar: '٥٤٠', en: '540' },
-    scope:    { ar: 'تصميم وضيافة كاملة', en: 'Full hospitality design' },
-    brief:    {
-      ar: 'مطعمُ مأكولاتٍ بحريّةٍ على الكورنيش — يطلبُ حميميّةً عبرَ صالةٍ واسعة.',
-      en: 'A seafood restaurant on the corniche — it asked for intimacy across a large dining floor.'
-    },
-    concept:  {
-      ar: [
-        'كسرنا الصالةَ إلى إيقاعٍ من الكُوَى المقوّسة، كلٌّ منها تظلِّلها مُعلَّقةٌ منخفضة. مقعدٌ بلوطٌ متّصل يحضنُ المحيط.',
-        'أرضياتٌ بحجرٍ جيريٍّ مدلوكٍ، جدرانٌ بجصٍّ من الطين الدافئ. ممرُّ المطبخ يصيرُ مسرحاً هادئاً.'
-      ],
-      en: [
-        'We broke the room into a rhythm of arched alcoves, each shaded by a low pendant. A continuous oak bench wraps the perimeter.',
-        'Tumbled limestone floors, warm clay plaster walls. The kitchen pass becomes a quiet stage.'
-      ]
-    },
-    materials:[
-      { ar:'حجر جيري مدلوك', en:'Tumbled limestone' },
-      { ar:'بلوط', en:'Oak' },
-      { ar:'جصّ طيني', en:'Clay plaster' },
-      { ar:'نحاس مفروش', en:'Brushed brass' },
-      { ar:'بلاط تيراكوتا', en:'Terracotta tile' }
-    ]
-  },
-  {
-    slug: 'tuwaiq-apartment',
-    type: 'residential',
-    cover: 'assets/images/projects/apartment-residence.svg',
-    gallery: [],
-    title:    { ar: 'شقّة طويق',          en: 'Tuwaiq Apartment' },
-    location: { ar: 'الرياض', en: 'Riyadh' },
-    year: '٢٠٢٤/2024',
-    area: { ar: '٢٢٠', en: '220' },
-    scope:    { ar: 'تصميم + نجارة مفصّلة', en: 'Design + bespoke joinery' },
-    brief:    {
-      ar: 'أوّلُ شقّةٍ لزوجين شابّين — مساحةٌ صغيرة وهويّةٌ قويّة.',
-      en: 'A young couple’s first apartment — small footprint, strong identity.'
-    },
-    concept:  {
-      ar: [
-        'لوحةُ خاماتٍ واحدةٌ عبرَ كاملِ الشقّة تخلقُ استمراريّة. جدارُ نجارةٍ مخصّصٌ يحملُ المطبخَ والمكتبةَ والمدخلَ بحركةٍ واحدة.',
-        'شاشاتٌ منزلقة تسمحُ للمعيشةِ وغرفةِ النوم بتقاسمِ الضوء دون أن يتقاسما الفراغ.'
-      ],
-      en: [
-        'A single material palette across the plan creates continuity. A custom millwork wall holds the kitchen, library, and entry in one gesture.',
-        'Sliding screens let the living and bedroom share light without sharing space.'
-      ]
-    },
-    materials:[
+    materials: [
       { ar:'بلوط أبيض', en:'White oak' },
-      { ar:'مايكروسمنت', en:'Microcement' },
-      { ar:'نحاس مفروش', en:'Brushed brass' },
+      { ar:'جصّ جيري', en:'Lime plaster' },
       { ar:'كتّان', en:'Linen' },
-      { ar:'تيرازو', en:'Terrazzo' }
+      { ar:'مايكروسمنت', en:'Microcement' },
+      { ar:'نحاس مفروش', en:'Brushed brass' }
     ]
   },
+
+  /* 03 ============================================================ */
   {
-    slug: 'heritage-majlis',
+    slug: 'modern-organic-villa',
     type: 'residential',
-    cover: 'assets/images/projects/majlis-heritage.svg',
-    gallery: [],
-    title:    { ar: 'مجلسٌ في الدّرعية', en: 'Heritage Majlis' },
-    location: { ar: 'الدّرعية', en: 'Al-Diriyah' },
-    year: '٢٠٢٣/2023',
-    area: { ar: '١٨٠', en: '180' },
-    scope:    { ar: 'مجلس + ملحقات', en: 'Majlis + ancillary spaces' },
-    brief:    {
-      ar: 'مجلسٌ جديد على حافّةِ فناءٍ قديم — أن يستضيفَ دون أن يطغى على روحِ المكان.',
-      en: 'A new majlis at the edge of an old courtyard — to host without overwhelming the spirit of the place.'
+    cover: 'assets/images/projects/modern-organic-villa/01.webp',
+    gallery: _gal('modern-organic-villa', 8),
+    title:    { ar: 'فيلا عضويّة معاصرة', en: 'Modern Organic Villa' },
+    location: { ar: 'الرياض', en: 'Riyadh' },
+    year:     '٢٠٢٥/2025',
+    area:     { ar: '٥٤٠', en: '540' },
+    scope:    { ar: 'تصميم كامل + إشراف', en: 'Full design + supervision' },
+    brief: {
+      ar: 'فيلا عائلية تطلب «عضوية» — يعني خاماتٍ تتنفّس وانحناءات طبيعية.',
+      en: 'A family villa asking for the word "organic" — breathing materials and natural curves.'
     },
-    concept:  {
+    concept: {
       ar: [
-        'جلسةٌ منخفضةٌ تمتدُّ على طولِ الغرفة. قوسٌ عريضٌ ضحلٌ مُغطَسٌ في الجدارِ الطويل يحملُ بِركةَ ضوءٍ عند الغروب.',
-        'استخدمنا جصَّ الطين، والنحاسَ العتيق، وسقفَ السعفِ، ومنسوجاتِ صوفِ الإبل، وأرضيّاتِ البازلت.'
+        'أزلنا كلَّ زاويةٍ حادّةٍ من المخطّط الداخلي. جدرانٌ منحنيةٌ بجصٍّ يدويٍّ، أعمدةٌ من خشب الجوز، وأنابيب إضاءةٍ تتبعُ الانحناءات.',
+        'الأرضيات حجرٌ طبيعي بحوافٍ مدلوكة. كلُّ عنصرٍ يبدو منحوتاً لا مُركَّباً.'
       ],
       en: [
-        'A single low seating runs the length of the room. A wide shallow arch recessed into the long wall holds a pool of light at dusk.',
-        'We used mud plaster, aged brass, palm-frond ceiling, camel-wool textiles, and basalt floors.'
+        'Every sharp corner left the plan. Curved walls in hand-applied plaster, walnut columns, and recessed light tubes that trace the curves.',
+        'Floors are natural stone with rounded edges. Every element looks carved rather than assembled.'
       ]
     },
-    materials:[
-      { ar:'جصّ طيني', en:'Mud plaster' },
-      { ar:'نحاس عتيق', en:'Aged brass' },
-      { ar:'سعف نخيل', en:'Palm-frond ceiling' },
-      { ar:'صوف الإبل', en:'Camel-wool textiles' },
-      { ar:'بازلت', en:'Basalt' }
+    materials: [
+      { ar:'جصّ يدوي', en:'Hand-applied plaster' },
+      { ar:'جوز', en:'Walnut' },
+      { ar:'ترافرتين', en:'Travertine' },
+      { ar:'طينٌ خام', en:'Raw clay' },
+      { ar:'نحاس مفروش', en:'Brushed brass' }
     ]
   },
+
+  /* 04 ============================================================ */
   {
-    slug: 'sahab-spa',
-    type: 'hospitality',
-    cover: 'assets/images/projects/spa-wellness.svg',
-    gallery: [],
-    title:    { ar: 'سَحاب · للعافية',     en: 'Sahab Spa' },
-    location: { ar: 'جدة', en: 'Jeddah' },
-    year: '٢٠٢٥/2025',
-    area: { ar: '٤٦٠', en: '460' },
-    scope:    { ar: 'تصميم + إشراف', en: 'Design + supervision' },
-    brief:    {
-      ar: 'منتجعُ عافيةٍ داخلَ برجٍ سكني — البريفُ كان كلمةً واحدة: «هدوء».',
-      en: 'A wellness retreat inside a residential tower — the brief was a single word: quiet.'
+    slug: 'ikea-concept-kitchen',
+    type: 'commercial',
+    cover: 'assets/images/projects/ikea-concept-kitchen/01.webp',
+    gallery: _gal('ikea-concept-kitchen', 10),
+    title:    { ar: 'مطبخ مفهومي · IKEA', en: 'IKEA Concept Kitchen' },
+    location: { ar: 'مفهومُ عرض', en: 'Retail concept' },
+    year:     '٢٠٢٤/2024',
+    area:     { ar: '٢٨', en: '28' },
+    scope:    { ar: 'تصوُّر مفهومي لمعرض', en: 'Concept visualisation for retail' },
+    brief: {
+      ar: 'تصوُّرُ مطبخٍ يستعرضُ إمكانيّاتِ IKEA الحديثة داخلَ مساحةِ عرضٍ صغيرة.',
+      en: 'A concept kitchen showcasing IKEA’s current capabilities in a compact retail footprint.'
     },
-    concept:  {
+    concept: {
       ar: [
-        'قبوٌ معماريٌّ يكتنفُ بِركةً عاكسة. الإضاءةُ كلُّها مخفيّة، والخاماتُ ناعمةٌ تحتَ القدم.',
-        'حذفنا كلَّ انعكاسٍ ليسَ ماءً. الرحلةُ متتابعة — وصولٌ، عتبة، قبو، ماء.'
+        'لعبنا على التباينِ بين الأبيضِ المثلج ولوحةٍ دافئةٍ من البلوط. كلُّ وحدةٍ لها مهمّةٌ واضحة — لا تكرار.',
+        'أجهزةٌ مدمجة، إضاءةٌ شريطيّةٌ تحتَ الخزائن، ولمساتٌ نباتيّةٌ تكسرُ الصرامة.'
       ],
       en: [
-        'A vaulted ceiling sweeps over a reflecting pool. Lighting is concealed, materials soft underfoot.',
-        'We removed every reflection that wasn’t water. The journey is sequential — arrival, threshold, vault, water.'
+        'A contrast between glacial white and a warm oak palette. Each unit has a single, clear role — no repetition.',
+        'Integrated appliances, under-cabinet light strips, and planted touches to break the discipline.'
       ]
     },
-    materials:[
+    materials: [
+      { ar:'لمينيت أبيض', en:'White laminate' },
+      { ar:'قشرة بلوط', en:'Oak veneer' },
+      { ar:'سطح كوارتز', en:'Quartz countertop' },
+      { ar:'فولاذ مفروش', en:'Brushed steel' },
+      { ar:'إضاءة LED مدمجة', en:'Integrated LED' }
+    ]
+  },
+
+  /* 05 ============================================================ */
+  {
+    slug: 'warm-transitional-home',
+    type: 'residential',
+    cover: 'assets/images/projects/warm-transitional-home/01.webp',
+    gallery: _gal('warm-transitional-home', 7),
+    title:    { ar: 'منزلٌ انتقاليٌّ دافئ', en: 'Warm Transitional Home' },
+    location: { ar: 'الرياض', en: 'Riyadh' },
+    year:     '٢٠٢٤/2024',
+    area:     { ar: '٣٢٠', en: '320' },
+    scope:    { ar: 'تصميم كامل', en: 'Full design' },
+    brief: {
+      ar: 'عائلةٌ تنتقلُ من الكلاسيكي إلى المعاصر — تريدُ جسراً مريحاً بين الزمنين.',
+      en: 'A family moving from classical to contemporary — wanting a comfortable bridge between the two.'
+    },
+    concept: {
+      ar: [
+        'احتفظنا بالأقمشة الثقيلة والأكاسي الكلاسيكية، لكن خفّفناها بإطاراتٍ نحيفة وألوانٍ ترابية.',
+        'الإضاءة دافئةٌ وكلاسيكيةٌ في التركيب، لكنّ توزيعَها معاصر. الانتقال غير محسوس.'
+      ],
+      en: [
+        'We kept the heavier fabrics and classical mouldings, then thinned the frames and shifted the palette to earth tones.',
+        'Lighting is classical in fixture but contemporary in distribution. The transition is barely felt.'
+      ]
+    },
+    materials: [
+      { ar:'بلوط', en:'Oak' },
+      { ar:'حرير خام', en:'Raw silk' },
+      { ar:'برونز مفروش', en:'Brushed bronze' },
+      { ar:'رخام', en:'Marble' },
+      { ar:'صوف', en:'Wool' }
+    ]
+  },
+
+  /* 06 ============================================================ */
+  {
+    slug: 'modern-classic-majlis',
+    type: 'residential',
+    cover: 'assets/images/projects/modern-classic-majlis/01.webp',
+    gallery: _gal('modern-classic-majlis', 5),
+    title:    { ar: 'مجلس ومعيشة كلاسيك معاصر', en: 'Modern Classic Majlis & Living' },
+    location: { ar: 'الرياض', en: 'Riyadh' },
+    year:     '٢٠٢٤/2024',
+    area:     { ar: '١٨٠', en: '180' },
+    scope:    { ar: 'مجلس + معيشة', en: 'Majlis + living areas' },
+    brief: {
+      ar: 'مجلسٌ يستضيفُ وقاراً يومياً ومناسباتٍ استثنائية — دونَ أن يفقدَ أيّاً منهما.',
+      en: 'A majlis hosting daily quiet dignity and exceptional gatherings — without losing either.'
+    },
+    concept: {
+      ar: [
+        'محيطٌ منخفضٌ من المقاعد المتّصلة يلفُّ الغرفة، وفي القلبِ طاولةُ قهوةٍ منحوتةٌ من رخامةٍ واحدة.',
+        'السقفُ بأشرطةِ جصٍّ دقيقةٍ تتلقّى ضوءاً مخفياً. أمسكنا الفخامةَ في النسبة لا في الزخرف.'
+      ],
+      en: [
+        'A low perimeter of continuous seating wraps the room; at the centre, a coffee table carved from a single block of marble.',
+        'The ceiling holds fine plaster strips that catch concealed light. Luxury is kept in proportion, not in ornament.'
+      ]
+    },
+    materials: [
+      { ar:'رخام', en:'Marble' },
+      { ar:'برونز', en:'Bronze' },
+      { ar:'مخمل', en:'Velvet' },
+      { ar:'بلوط', en:'Oak' },
+      { ar:'زجاجٌ مقطوعٌ يدوياً', en:'Hand-cut glass' }
+    ]
+  },
+
+  /* 07 ============================================================ */
+  {
+    slug: 'quiet-luxury-suite',
+    type: 'residential',
+    cover: 'assets/images/projects/quiet-luxury-suite/01.webp',
+    gallery: _gal('quiet-luxury-suite', 10),
+    title:    { ar: 'جناحٌ رئيسيٌّ بفخامةٍ هادئة', en: 'Quiet Luxury Master Suite' },
+    location: { ar: 'جدّة', en: 'Jeddah' },
+    year:     '٢٠٢٥/2025',
+    area:     { ar: '١١٠', en: '110' },
+    scope:    { ar: 'جناح رئيسي + حمّام', en: 'Master suite + bath' },
+    brief: {
+      ar: 'جناحٌ كاملٌ لزوجين يطلبان «فخامةً هادئة» — بدون لمعانٍ ولا شعارات.',
+      en: 'A full suite for a couple asking for "quiet luxury" — no gleam, no logos.'
+    },
+    concept: {
+      ar: [
+        'جدارٌ رئيسيٌّ من الجصِّ الناعم بظلالٍ مدروسة، سريرٌ منحوتٌ من البلوطِ بعازلٍ صوتيٍّ خفيّ، وحمّامٌ بحوضِ حجرٍ منحوت.',
+        'الإضاءةُ كلُّها مخفيّةٌ في النِسَب المعمارية. الراحةُ هي الفخامةُ الحقيقية.'
+      ],
+      en: [
+        'A main wall in fine plaster with intentional shadow, a bed carved in oak with hidden acoustic damping, and a bath with a sculpted stone basin.',
+        'All lighting is concealed within the architecture. Comfort is the real luxury.'
+      ]
+    },
+    materials: [
+      { ar:'جصّ جيري', en:'Lime plaster' },
+      { ar:'بلوط مُدخَّن', en:'Smoked oak' },
       { ar:'ترافرتين', en:'Travertine' },
-      { ar:'بازلت', en:'Basalt' },
-      { ar:'أرز مزيَّت', en:'Oiled cedar' },
+      { ar:'كتّانٌ خام', en:'Raw linen' },
+      { ar:'برونز مفروش', en:'Brushed bronze' }
+    ]
+  },
+
+  /* 08 ============================================================ */
+  {
+    slug: 'contemporary-luxury-penthouse',
+    type: 'residential',
+    cover: 'assets/images/projects/contemporary-luxury-penthouse/01.webp',
+    gallery: _gal('contemporary-luxury-penthouse', 9),
+    title:    { ar: 'بنتهاوس فاخر معاصر', en: 'Contemporary Luxury Penthouse' },
+    location: { ar: 'الرياض', en: 'Riyadh' },
+    year:     '٢٠٢٥/2025',
+    area:     { ar: '٤٨٠', en: '480' },
+    scope:    { ar: 'تصميم كامل', en: 'Full design' },
+    brief: {
+      ar: 'بنتهاوس بإطلالةٍ بانوراميةٍ يحتاج تخطيطاً يخدمُ الإطلالةَ أوّلاً.',
+      en: 'A penthouse with a panoramic view that demanded a plan serving the view first.'
+    },
+    concept: {
+      ar: [
+        'أزحنا كلَّ العناصر الثقيلة عن واجهةِ الزجاج. سقفٌ مزدوجُ الارتفاع، أرضيّةُ ترافرتين متّصلة، وجزيرةُ معيشةٍ منخفضةٌ تتركُ الأفقَ غيرَ منقطع.',
+        'الجدارُ الخلفي يحتضنُ كلَّ التخزينِ خلفَ فجواتٍ نحاسيّةٍ مخفيّة.'
+      ],
+      en: [
+        'All heavy elements were pushed off the glass façade. A double-height ceiling, a continuous travertine floor, and a sunken living island that leaves the horizon unbroken.',
+        'The back wall absorbs every storage need behind concealed brass reveals.'
+      ]
+    },
+    materials: [
+      { ar:'ترافرتين', en:'Travertine' },
+      { ar:'بلوط مُدخَّن', en:'Smoked oak' },
+      { ar:'نحاس مفروش', en:'Brushed brass' },
+      { ar:'جصّ مصقول', en:'Polished plaster' },
+      { ar:'جلد', en:'Leather' }
+    ]
+  },
+
+  /* 09 ============================================================ */
+  {
+    slug: 'mediterranean-vacation-home',
+    type: 'hospitality',
+    cover: 'assets/images/projects/mediterranean-vacation-home/01.webp',
+    gallery: _gal('mediterranean-vacation-home', 7),
+    title:    { ar: 'بيتُ إجازةٍ متوسطيّ', en: 'Mediterranean Vacation Home' },
+    location: { ar: 'الساحلُ الغربي', en: 'West coast' },
+    year:     '٢٠٢٥/2025',
+    area:     { ar: '٣٦٠', en: '360' },
+    scope:    { ar: 'تصميم + تأثيث كامل', en: 'Design + full furnishing' },
+    brief: {
+      ar: 'بيتُ إجازةٍ على البحر — يستقبلُ العائلةَ الكبيرةَ في الصيف، ويبقى دافئاً في الشتاء.',
+      en: 'A beachfront vacation home — hosting the extended family in summer, staying warm through winter.'
+    },
+    concept: {
+      ar: [
+        'أسقفٌ بيضاءُ عالية، جدرانٌ بجصٍّ جيريٍّ مكسور، وأرضيّاتُ قِرميدٍ طبيعي. ستائرُ كتّانيّةٌ تتراقصُ مع الهواء.',
+        'الجلسةُ الخارجيّةُ تتدفّقُ إلى الداخل عبر بابٍ مقوّسٍ عريض. كلُّ غرفةٍ لها لونٌ مأخوذٌ من البحر أو من رملِ الشاطئ.'
+      ],
+      en: [
+        'High white ceilings, broken lime-washed walls, and terracotta tile floors. Linen curtains dance with the breeze.',
+        'The outdoor seating flows in through a wide arched door. Every room has a colour drawn from the sea or the sand.'
+      ]
+    },
+    materials: [
       { ar:'دهانٌ جيري', en:'Lime wash' },
-      { ar:'حرير خام', en:'Raw silk' }
+      { ar:'بلاط تيراكوتا', en:'Terracotta tile' },
+      { ar:'كتّانٌ خام', en:'Raw linen' },
+      { ar:'خشبُ الزيتون', en:'Olive wood' },
+      { ar:'سيراميك مزجَّج يدوياً', en:'Hand-glazed ceramic' }
+    ]
+  },
+
+  /* 10 ============================================================ */
+  {
+    slug: 'al-kahtany-apartment',
+    type: 'residential',
+    cover: 'assets/images/projects/al-kahtany-apartment/01.webp',
+    gallery: _gal('al-kahtany-apartment', 9),
+    title:    { ar: 'شقّة عبدالله القحطاني', en: 'Abdullah Al-Kahtany Apartment' },
+    location: { ar: 'الرياض', en: 'Riyadh' },
+    year:     '٢٠٢٤/2024',
+    area:     { ar: '١٧٥', en: '175' },
+    scope:    { ar: 'تصميم + تنفيذ', en: 'Design + execution' },
+    brief: {
+      ar: 'شقّةُ شابٍّ يعملُ في التقنية — يبحثُ عن خصوصيّةٍ بصريّةٍ بدون فوضى.',
+      en: 'A young technologist’s apartment — looking for visual privacy without clutter.'
+    },
+    concept: {
+      ar: [
+        'مكتبةٌ سقفيّةٌ تحتضنُ الجدارَ الكامل خلفَ المعيشة، تُخفي التلفازَ ومنظومةَ الصوت.',
+        'لونٌ أساسيٌّ رماديٌّ محايدٌ بدفء البلوط، وجدارُ مكتبٍ بأخضرَ زيتونيٍّ عميق. الإضاءةُ الذكيّةُ تتغيّرُ حسبَ الوقتِ من النهار.'
+      ],
+      en: [
+        'A floor-to-ceiling library wraps the wall behind the living area, hiding the TV and the sound system.',
+        'A neutral grey base warmed by oak, with a study wall in deep olive green. Smart lighting shifts through the day.'
+      ]
+    },
+    materials: [
+      { ar:'بلوط مُدخَّن', en:'Smoked oak' },
+      { ar:'مايكروسمنت', en:'Microcement' },
+      { ar:'لبدٌ بأخضرَ زيتوني', en:'Olive-green felt' },
+      { ar:'فولاذٌ أسودُ مفروش', en:'Brushed black steel' },
+      { ar:'كتّان', en:'Linen' }
     ]
   }
 ];
