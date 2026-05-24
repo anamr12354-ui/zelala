@@ -169,19 +169,33 @@ html[lang="ar"] .section-title{ font-weight: 700; }
   padding-block: 14px;
 }
 .nav__brand{
-  display:flex; align-items:baseline; gap:10px;
-  font-family: var(--font-display); font-size: 26px; line-height:1;
+  display:flex; align-items:center;
   color: var(--light);
+  line-height: 0;
 }
-html[lang="ar"] .nav__brand{ font-size: 28px; font-weight: 700; }
-.nav__brand .brand-mark{ color: var(--light); }
-.nav__brand .brand-mark--alt{
-  font-family: var(--font-display);
-  font-size: 13px; letter-spacing: .26em; text-transform: uppercase;
-  color: var(--stone);
+.nav__logo{
+  block-size: 52px; inline-size: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.45));
+  transition: transform var(--t) var(--ease), filter var(--t) var(--ease), block-size var(--t) var(--ease);
 }
-html[lang="ar"] .nav__brand .brand-mark--alt{
-  font-family: 'Cormorant', Georgia, serif; font-style: italic; letter-spacing:.18em;
+.nav.is-scrolled .nav__logo{ block-size: 44px; }
+.nav__brand:hover .nav__logo{
+  transform: scale(1.03);
+  filter: drop-shadow(0 6px 18px rgba(232,174,116,.35));
+}
+@media (max-width: 600px){
+  .nav__logo{ block-size: 42px; }
+  .nav.is-scrolled .nav__logo{ block-size: 38px; }
+}
+
+/* Accessible visually-hidden utility for SR-only text */
+.visually-hidden{
+  position: absolute !important;
+  inline-size: 1px !important; block-size: 1px !important;
+  padding: 0 !important; margin: -1px !important;
+  overflow: hidden !important; clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important; border: 0 !important;
 }
 .nav__links{
   display:flex; gap: clamp(20px, 3vw, 40px);
@@ -279,20 +293,20 @@ html[lang="en"] .menu-overlay a{ font-style: italic; }
 }
 .hero__mark{
   position: relative;
-  font-family: var(--font-display);
-  color: var(--light);
-  line-height: 1;
-  letter-spacing: -.02em;
   display:flex; flex-direction: column; align-items:center; gap: 10px;
   opacity:0; transform: translateY(20px);
   animation: rise 1200ms var(--ease-out) .25s forwards;
+  margin: 0;
 }
-.hero__mark .mark-ar{ font-family: 'Aref Ruqaa','Amiri', serif; font-weight: 700; }
-.hero__mark .mark-en{ font-family: 'Cormorant', Georgia, serif; font-style: italic; font-weight: 400; }
-html[lang="ar"] .hero__mark .mark-ar{ font-size: var(--fs-display-1); }
-html[lang="ar"] .hero__mark .mark-en{ font-size: clamp(22px,2.4vw,36px); color: var(--stone); letter-spacing: .16em; text-transform: uppercase; font-style: normal; }
-html[lang="en"] .hero__mark .mark-en{ font-size: var(--fs-display-1); letter-spacing: -.02em; }
-html[lang="en"] .hero__mark .mark-ar{ font-size: clamp(22px,3vw,42px); color: var(--stone); opacity: .85; order: -1; margin-block-end: 12px; }
+.hero__logo{
+  inline-size: clamp(280px, 38vw, 540px);
+  block-size: auto;
+  display: block;
+  margin-inline: auto;
+  filter:
+    drop-shadow(0 18px 60px rgba(232,174,116,.30))
+    drop-shadow(0 8px 22px rgba(0,0,0,.55));
+}
 .hero__sub{
   margin-block-start: 28px;
   font-family: var(--font-mono);
@@ -688,13 +702,19 @@ html[dir="rtl"] .btn svg{ transform: scaleX(-1); }
 }
 @media (max-width: 820px){ .footer__grid{ grid-template-columns: 1fr 1fr; } }
 .footer__brand{
-  font-family: var(--font-display); font-size: clamp(48px,6vw,84px); line-height:1;
-  color: var(--light); opacity:.85;
+  display: flex; flex-direction: column; align-items: flex-start;
+  color: var(--light);
 }
-html[lang="en"] .footer__brand{ font-style: italic; }
+.footer__logo{
+  inline-size: clamp(220px, 22vw, 360px);
+  block-size: auto;
+  display: block;
+  margin-block-end: 18px;
+  filter: drop-shadow(0 8px 22px rgba(0,0,0,.5));
+}
 .footer__brand small{
   display:block; font-family: var(--font-mono); font-size: 11px; letter-spacing:.22em;
-  text-transform: uppercase; color: var(--stone); margin-block-start: 14px; opacity:1;
+  text-transform: uppercase; color: var(--stone); opacity:1;
   font-style: normal;
 }
 .footer__col h5{
