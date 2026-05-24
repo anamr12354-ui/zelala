@@ -6,11 +6,11 @@
    ========================================================= */
 
 window.SITE = {
-  /* PLACEHOLDER values — replace with real */
-  whatsapp:   '+966500000000',
-  whatsappDisplay: '+966 50 000 0000',
+  /* Real contact values */
+  whatsapp:   '+966544011202',
+  whatsappDisplay: '+966 54 401 1202',
   email:      'hello@zelala.studio',
-  phone:      '+966 50 000 0000',
+  phone:      '+966 54 401 1202',
   instagram:  'zelala.studio',
   founded:    2018,
   cityAr:     'الرياض',
