@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#141110" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>ظلالة · Zelala — استوديو تصميم داخلي</title>
+  <meta name="description" content="ظلالة — استوديو تصميم داخلي يصنع داخليّاتٍ هادئة تتجمّع حول لحظة ضوء واحدة. Zelala is a Saudi interior design studio designing quiet, light-led spaces." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ظلالة · Zelala — Interior Design Studio" />
+  <meta property="og:description" content="A Saudi interior design studio shaping space the way light shapes its shadow." />
+  <meta property="og:image" content="assets/og.svg" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Filmic grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Zelala">
+      <span class="brand-mark">ظلالة</span>
+      <span class="brand-mark--alt">Zelala</span>
+    </a>
+
+    <nav class="nav__links" aria-label="primary">
+      <a href="#about"    data-i18n="nav.about">الاستوديو</a>
+      <a href="#projects" data-i18n="nav.projects">المشاريع</a>
+      <a href="#services" data-i18n="nav.services">الخدمات</a>
+      <a href="#contact"  data-i18n="nav.contact">تواصل</a>
+    </nav>
+
+    <div class="nav__right">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span data-lang-btn="ar">AR</span>
+        <span class="sep">/</span>
+        <span data-lang-btn="en">EN</span>
+      </button>
+      <button class="nav__menu-btn" id="menu-open" aria-label="Open menu" data-i18n-aria="nav.menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- mobile overlay menu -->
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+    <button class="close" id="menu-close" aria-label="Close" data-i18n-aria="nav.close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <a href="#about"    data-menu-link data-i18n="nav.about">الاستوديو</a>
+    <a href="#projects" data-menu-link data-i18n="nav.projects">المشاريع</a>
+    <a href="#services" data-menu-link data-i18n="nav.services">الخدمات</a>
+    <a href="#contact"  data-menu-link data-i18n="nav.contact">تواصل</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" aria-labelledby="hero-mark">
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">تأسّس ٢٠١٨ · الرياض</p>
+        <h1 class="hero__mark" id="hero-mark">
+          <span class="mark-ar">ظلالة</span>
+          <span class="mark-en">Zelala</span>
+        </h1>
+        <p class="hero__sub" data-i18n="hero.sub">استوديو تصميم داخلي</p>
+        <p class="hero__tagline" data-i18n="hero.tagline">نُصمّمُ الفراغَ كما يصوغُ الضوءُ ظلَّه.</p>
+      </div>
+      <a class="hero__cue" href="#about" aria-label="Scroll to studio section">
+        <span data-i18n="hero.cue">تصفّح</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="about.eyebrow">٠١ — الاستوديو</span>
+        </div>
+        <div class="about__grid">
+          <div class="about__text">
+            <h2 class="lead reveal" id="about-title" data-i18n="about.title">نُصمِّمُ بالنّور قبل أن نُصمّمَ بالجدران.</h2>
+            <p class="reveal" style="--i:1" data-i18n="about.p1">ظلالة استوديوٌ سعودي يصنع داخليّاتٍ مُهْذَّبة، تتجمّع حول لحظةِ ضوءٍ واحدة وتفسحُ للحياة أن تتشكّل ببطء داخل الفراغ.</p>
+            <p class="reveal" style="--i:2" data-i18n="about.p2">كل مشروع نبدؤه من اتجاه الشمس، ومن الخامة التي ستحملُ بصمات اليد، ومن إيقاعِ المسافات بين ما هو ضروري وما هو زائد.</p>
+
+            <div class="principles">
+              <article class="principle reveal" style="--i:1">
+                <span class="principle__num">01</span>
+                <div>
+                  <h3 data-i18n="p.light.t">النّور</h3>
+                  <p data-i18n="p.light.d">الضوءُ ركنٌ مُصمَّم — يُحرَّك ويُؤجَّل ويُوزَّع كأنه أثاث. النوافذُ مواعيد، والظلُّ لون.</p>
+                </div>
+              </article>
+              <article class="principle reveal" style="--i:2">
+                <span class="principle__num">02</span>
+                <div>
+                  <h3 data-i18n="p.space.t">الفراغ</h3>
+                  <p data-i18n="p.space.d">نُؤمن بأنّ السّخاءَ في المسافة قبل أن يكون في الزخرفة. الفراغ يُربّي العين.</p>
+                </div>
+              </article>
+              <article class="principle reveal" style="--i:3">
+                <span class="principle__num">03</span>
+                <div>
+                  <h3 data-i18n="p.material.t">الخامة</h3>
+                  <p data-i18n="p.material.d">نختار الخاماتِ التي تتقدّمُ في العمر بكرامة — حجرٌ يثقل، خشبٌ يدفأ، نحاسٌ يكتسي.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <figure class="about__media reveal">
+            <img src="assets/images/about-studio.svg" alt="Atmospheric interior detail · ظلالة" />
+          </figure>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <span class="stat__num" data-i18n="stat.years.n">٠٧</span>
+            <span class="stat__label" data-i18n="stat.years.l">سنواتٌ من التصميم</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-i18n="stat.projects.n">٤٢</span>
+            <span class="stat__label" data-i18n="stat.projects.l">مشروعٌ مُكتمل</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-i18n="stat.area.n">١٨٬٠٠٠</span>
+            <span class="stat__label" data-i18n="stat.area.l">مترٌ مربّع مُصمَّم</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-i18n="stat.cities.n">٠٤</span>
+            <span class="stat__label" data-i18n="stat.cities.l">مدنٌ سعودية</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="projects.eyebrow">٠٢ — المشاريع</span>
+          <h2 class="section-title" id="projects-title" data-i18n="projects.title">مشاريعُ مختارة.</h2>
+          <p class="section-intro" data-i18n="projects.intro">مجموعةٌ من الداخليّاتِ السكنية والتجارية والضيافة — كلٌّ منها قِصّةٌ مختلفة عن النّور.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Project filters">
+          <button class="filter-chip is-active" data-filter="all"         data-i18n="filter.all">الكل</button>
+          <button class="filter-chip"          data-filter="residential" data-i18n="filter.residential">سكني</button>
+          <button class="filter-chip"          data-filter="commercial"  data-i18n="filter.commercial">تجاري</button>
+          <button class="filter-chip"          data-filter="hospitality" data-i18n="filter.hospitality">ضيافة</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid" aria-live="polite"><!-- JS-rendered --></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="services.eyebrow">٠٣ — الخدمات</span>
+          <h2 class="section-title" id="services-title" data-i18n="services.title">ما نُقدّمه.</h2>
+          <p class="section-intro" data-i18n="services.intro">من الفكرة الأولى إلى آخر تركيبة — نُغطّي الرحلة كاملةً مع تركيزٍ معماري.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service reveal" style="--i:1">
+            <span class="service__num">01</span>
+            <svg class="service__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+            <h3 data-i18n="s1.t">تصميمٌ سكني</h3>
+            <p data-i18n="s1.d">فِلَل ودِبْلَكسات وشَقَق سكنية، من المخطّط إلى الأثاث.</p>
+          </article>
+          <article class="service reveal" style="--i:2">
+            <span class="service__num">02</span>
+            <svg class="service__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="9" y1="7" x2="9" y2="7.01"/><line x1="13" y1="7" x2="13" y2="7.01"/><line x1="9" y1="11" x2="9" y2="11.01"/><line x1="13" y1="11" x2="13" y2="11.01"/><line x1="9" y1="15" x2="9" y2="15.01"/><line x1="13" y1="15" x2="13" y2="15.01"/></svg>
+            <h3 data-i18n="s2.t">تجاري وتجزئة</h3>
+            <p data-i18n="s2.d">مقرّات، صالات عرض، متاجر — هويّةٌ مكانية تخدم العلامة.</p>
+          </article>
+          <article class="service reveal" style="--i:3">
+            <span class="service__num">03</span>
+            <svg class="service__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h14a1 1 0 0 1 1 1v1a7 7 0 0 1-7 7H11a7 7 0 0 1-7-7v-1a1 1 0 0 1 1-1z"/><path d="M20 12h1a2 2 0 0 1 0 4h-1"/><line x1="8" y1="4" x2="8" y2="6"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="16" y1="4" x2="16" y2="6"/></svg>
+            <h3 data-i18n="s3.t">ضيافة ومطاعم</h3>
+            <p data-i18n="s3.d">مطاعم، فنادق، أجنحة — مشاهد تنتظمُ حول التجربة.</p>
+          </article>
+          <article class="service reveal" style="--i:4">
+            <span class="service__num">04</span>
+            <svg class="service__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V5l9-2 9 2v12"/><circle cx="12" cy="11" r="3"/><path d="M5 21l3-3h8l3 3"/></svg>
+            <h3 data-i18n="s4.t">استشاراتٌ تصميمية</h3>
+            <p data-i18n="s4.d">جلساتٌ مركّزة لتحرير قرارٍ، أو لمراجعة مشروعٍ قائم.</p>
+          </article>
+          <article class="service reveal" style="--i:5">
+            <span class="service__num">05</span>
+            <svg class="service__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M3 19v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><line x1="5" y1="22" x2="5" y2="19"/><line x1="19" y1="22" x2="19" y2="19"/></svg>
+            <h3 data-i18n="s5.t">تنسيقٌ وأثاث</h3>
+            <p data-i18n="s5.d">اختيارٌ وتوريدٌ وتركيب للأثاث والإكسسوارات والإضاءة.</p>
+          </article>
+          <article class="service reveal" style="--i:6">
+            <span class="service__num">06</span>
+            <svg class="service__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6l1 4H8z"/><path d="M5 8h14l-1 12H6z"/><polyline points="9 13 11 15 15 11"/></svg>
+            <h3 data-i18n="s6.t">إشرافٌ تنفيذي</h3>
+            <p data-i18n="s6.d">متابعةُ الورشة والمقاولين لضمان وصول الفكرة بأمانة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="process.eyebrow">٠٤ — الطريقة</span>
+          <h2 class="section-title" id="process-title" data-i18n="process.title">أربعُ مراحل، إيقاعٌ واحد.</h2>
+        </div>
+        <div class="process-strip">
+          <div class="process-step reveal" style="--i:1">
+            <span class="process-step__num">01</span>
+            <h4 data-i18n="pr1.t">التشاوُر</h4>
+            <p data-i18n="pr1.d">نُصغي للموقع والحياة المرتقبة، ونرسم البريف الحقيقي.</p>
+          </div>
+          <div class="process-step reveal" style="--i:2">
+            <span class="process-step__num">02</span>
+            <h4 data-i18n="pr2.t">التصوُّر</h4>
+            <p data-i18n="pr2.d">لوحاتُ مزاج، مخطّطات أوّلية، خامات — ندوّن فكرة المشروع.</p>
+          </div>
+          <div class="process-step reveal" style="--i:3">
+            <span class="process-step__num">03</span>
+            <h4 data-i18n="pr3.t">التطوير</h4>
+            <p data-i18n="pr3.d">تفاصيلٌ تنفيذية، رسوم نهائية، مواصفات وعيّنات.</p>
+          </div>
+          <div class="process-step reveal" style="--i:4">
+            <span class="process-step__num">04</span>
+            <h4 data-i18n="pr4.t">التنفيذ</h4>
+            <p data-i18n="pr4.d">إشرافٌ في الورشة، تنسيق المقاولين، تسليمٌ مدروس.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIAL ============ -->
+    <section class="testimonial reveal">
+      <div class="container">
+        <blockquote>
+          <span data-i18n="q.text">البيتُ تنفّس منذ اليوم الأول — كأنّ الضوءَ كان يعرفُ مسبقاً أين سيقف.</span>
+          <cite data-i18n="q.cite">عميلٌ خاص · الرياض ٢٠٢٥</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head contact__head reveal">
+          <span class="eyebrow" data-i18n="contact.eyebrow">٠٥ — تواصل</span>
+          <p class="invite" id="contact-title" data-i18n="contact.invite">تعالَ نُصمّمْ أوّلَ ساعةٍ من نهارك.</p>
+          <p class="section-intro" data-i18n="contact.intro">نستقبلُ مشروعاً واحداً جديداً كلَّ شهر. كلّما تواصلتَ مبكّراً، كان أيسر أن نكونَ معك.</p>
+        </div>
+
+        <div class="contact__grid">
+          <dl class="contact__details reveal">
+            <div class="contact-row">
+              <dt data-i18n="c.email">البريد</dt>
+              <dd><a id="contact-email" href="#">hello@zelala.studio</a></dd>
+            </div>
+            <div class="contact-row">
+              <dt data-i18n="c.phone">الهاتف</dt>
+              <dd><a id="contact-phone" href="#">+966 50 000 0000</a></dd>
+            </div>
+            <div class="contact-row">
+              <dt data-i18n="c.location">الموقع</dt>
+              <dd data-i18n="c.locationVal">الرياض، المملكة العربية السعودية</dd>
+            </div>
+            <div class="contact-row">
+              <dt data-i18n="c.social">المتابعة</dt>
+              <dd>
+                <div class="social-row">
+                  <a id="social-ig" href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                  </a>
+                  <a id="social-wa" href="#" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.4zM12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.9.5 3.6 1.4 5.2L2 22l5-1.6c1.5.8 3.2 1.3 5 1.3 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2z"/></svg>
+                  </a>
+                </div>
+              </dd>
+            </div>
+          </dl>
+
+          <form class="form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="f-name" data-i18n="f.name">الاسم</label>
+              <input id="f-name" name="name" type="text" data-i18n-placeholder="f.namePh" placeholder="كيف نناديك؟" required />
+            </div>
+            <div class="field">
+              <label for="f-email" data-i18n="f.email">البريد أو الهاتف</label>
+              <input id="f-email" name="contact" type="text" data-i18n-placeholder="f.emailPh" placeholder="كيف نرد عليك" required />
+            </div>
+            <div class="field">
+              <label for="f-msg" data-i18n="f.message">الرسالة</label>
+              <textarea id="f-msg" name="message" rows="4" data-i18n-placeholder="f.messagePh" placeholder="حدّثنا عن المشروع وموعد البدء…" required></textarea>
+            </div>
+            <div>
+              <button class="btn" type="submit">
+                <span data-i18n="f.send">أرسل الرسالة</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="brand-mark">ظلالة</span>
+          <small data-i18n="footer.tag">استوديو تصميم داخلي · ٢٠١٨ — الآن</small>
+        </div>
+        <div class="footer__col">
+          <h5 data-i18n="footer.nav">تصفّح</h5>
+          <ul>
+            <li><a href="#about"    data-i18n="nav.about">الاستوديو</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">المشاريع</a></li>
+            <li><a href="#services" data-i18n="nav.services">الخدمات</a></li>
+            <li><a href="#contact"  data-i18n="nav.contact">تواصل</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5 data-i18n="footer.cont">تواصل</h5>
+          <ul>
+            <li><a id="footer-email" href="#">hello@zelala.studio</a></li>
+            <li><a id="footer-phone" href="#">+966 50 000 0000</a></li>
+            <li><span data-i18n="c.locationVal">الرياض، المملكة العربية السعودية</span></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5 data-i18n="footer.foll">المتابعة</h5>
+          <ul>
+            <li><a id="footer-ig" href="#">Instagram</a></li>
+            <li><a id="footer-wa" href="#">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.rights">© ٢٠٢٦ ظلالة. كل الحقوق محفوظة.</span>
+        <a class="back-to-top" href="#top">
+          <span data-i18n="footer.top">إلى الأعلى</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="18 14 12 8 6 14"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Floating WhatsApp ============ -->
+  <a class="fab-wa" id="fab-wa" href="#" target="_blank" rel="noopener" data-i18n-aria="wa.aria" aria-label="افتح محادثة واتساب">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.5-.4zM12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.9.5 3.6 1.4 5.2L2 22l5-1.6c1.5.8 3.2 1.3 5 1.3 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2z"/></svg>
+    <span class="fab-wa__tip" data-i18n="wa.tip">تواصل واتساب</span>
+  </a>
+
+  <!-- ============ Case-study overlay (JS-rendered) ============ -->
+  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title" tabindex="-1">
+    <button class="case__close" id="case-close" aria-label="Close" data-i18n-aria="case.close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <div id="case-content"><!-- JS-rendered --></div>
+  </div>
+
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

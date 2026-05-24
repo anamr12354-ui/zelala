@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" width="1280" height="1280" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#272019"/>
+      <stop offset="0.55" stop-color="#171310"/>
+      <stop offset="1" stop-color="#0B0908"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.28" cy="0.24" r="0.7">
+      <stop offset="0" stop-color="#E2A468" stop-opacity="0.46"/>
+      <stop offset="0.45" stop-color="#C77B45" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#C77B45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#F1ECE3" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#F1ECE3" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.84" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="1280" height="1280" fill="url(#bg)"/>
+  <rect width="1280" height="1280" fill="url(#glow)"/>
+  <polygon points="120,150 470,150 700,940 120,940" fill="url(#shaft)"/>
+  <g stroke="#BCA88E" fill="none" stroke-width="2.5" opacity="0.33" stroke-linecap="round">
+    <line x1="700" y1="120" x2="700" y2="940"/>
+    <line x1="700" y1="940" x2="1180" y2="940"/>
+    <line x1="120" y1="940" x2="700" y2="940"/>
+    <rect x="250" y="300" width="240" height="300"/>
+    <line x1="370" y1="300" x2="370" y2="600" opacity="0.5"/>
+    <path d="M790 940 V792 q200 -30 330 0 V940"/>
+    <path d="M820 792 V716 h70 v76 M1020 792 V716 h70 v76"/>
+    <line x1="955" y1="660" x2="955" y2="792" opacity="0.5"/>
+  </g>
+  <circle cx="370" cy="450" r="40" fill="none" stroke="#E0A36B" stroke-width="2.5" opacity="0.55"/>
+  <g stroke="#BCA88E" stroke-width="2" opacity="0.3">
+    <line x1="1010" y1="500" x2="1010" y2="792"/>
+    <ellipse cx="1010" cy="486" rx="58" ry="20" fill="none"/>
+  </g>
+  <rect width="1280" height="1280" filter="url(#gr)" opacity="0.17"/>
+  <rect width="1280" height="1280" fill="#0B0908" opacity="0.1"/>
+</svg>

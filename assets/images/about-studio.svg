@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1300" width="900" height="1300" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0.1" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#28201A"/>
+      <stop offset="0.55" stop-color="#161210"/>
+      <stop offset="1" stop-color="#0B0908"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.20" r="0.7">
+      <stop offset="0" stop-color="#E8AE74" stop-opacity="0.54"/>
+      <stop offset="0.40" stop-color="#C77B45" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#C77B45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F1ECE3" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#F1ECE3" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="900" height="1300" fill="url(#bg)"/>
+  <rect width="900" height="1300" fill="url(#glow)"/>
+  <polygon points="310,140 590,140 720,1020 180,1020" fill="url(#shaft)"/>
+  <g stroke="#BCA88E" fill="none" stroke-width="2.5" opacity="0.34" stroke-linecap="round">
+    <path d="M310 1020 V410 a140 200 0 0 1 280 0 V1020"/>
+    <path d="M362 1020 V440 a88 152 0 0 1 176 0 V1020" opacity="0.7"/>
+    <line x1="60" y1="1020" x2="840" y2="1020"/>
+    <line x1="160" y1="1020" x2="160" y2="1184"/>
+    <line x1="160" y1="1184" x2="380" y2="1184"/>
+    <line x1="380" y1="1184" x2="380" y2="1020"/>
+  </g>
+  <circle cx="450" cy="248" r="36" fill="#E8AE74" opacity="0.55"/>
+  <circle cx="450" cy="248" r="9" fill="#F1ECE3" opacity="0.85"/>
+  <g stroke="#7C6A52" stroke-width="2" opacity="0.4">
+    <line x1="540" y1="1120" x2="780" y2="1120"/>
+    <line x1="540" y1="1156" x2="700" y2="1156"/>
+  </g>
+  <rect width="900" height="1300" filter="url(#gr)" opacity="0.18"/>
+  <rect width="900" height="1300" fill="#0B0908" opacity="0.1"/>
+</svg>
