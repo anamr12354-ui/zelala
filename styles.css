@@ -4,25 +4,30 @@
    Dark & Architectural · bilingual (AR/EN, RTL/LTR)
    ========================================================= */
 
-/* --------- Tokens --------- */
+/* --------- Tokens (Design System v2/v3 — gold-matched) ---------
+   v1 used an amber-terracotta accent (#C77B45) that read as orange
+   against the actual gold logo. v2 swaps the accent for champagne gold
+   so brand + UI agree, and warms the neutrals slightly. */
 :root{
   /* Palette */
-  --bg: #141110;
-  --bg-deep: #0D0B0A;
-  --surface: #221C18;
-  --surface-2: #2A241F;
-  --stone: #BCA88E;
-  --stone-dim: #7C6A52;
-  --light: #F1ECE3;
-  --muted: rgba(241,236,227,.62);
-  --faint: rgba(241,236,227,.42);
-  --accent: #C77B45;
-  --accent-bright: #E8AE74;
-  --accent-soft: rgba(199,123,69,.16);
-  --hairline: rgba(241,236,227,.10);
-  --hairline-strong: rgba(241,236,227,.18);
+  --bg: #0F0D0B;
+  --bg-deep: #080705;
+  --surface: #1A1714;
+  --surface-2: #221E1A;
+  --stone: #B0987B;
+  --stone-dim: #6F5E48;
+  --light: #EFEAE0;
+  --muted: rgba(239,234,224,.62);
+  --faint: rgba(239,234,224,.42);
+  --accent: #D4A24C;
+  --accent-bright: #E6C16E;
+  --accent-soft: rgba(212,162,76,.14);
+  --hairline: rgba(239,234,224,.08);
+  --hairline-strong: rgba(239,234,224,.16);
   --shadow-soft: 0 30px 60px -30px rgba(0,0,0,.7);
-  --shadow-amber: 0 0 60px -10px rgba(232,174,116,.35);
+  --shadow-gold: 0 0 80px -20px rgba(212,162,76,.28);
+  --shadow-amber: 0 0 60px -10px rgba(232,174,116,.35); /* hero bloom only */
+  --wa: #25D366; /* WhatsApp brand — fab only */
 
   /* Typography */
   --fs-display-1: clamp(64px, 12vw, 200px);
@@ -58,10 +63,16 @@
   --t-slow: 600ms;
 }
 
-/* Language-aware font stacks */
+/* Language-aware font stacks (v3 — architectural pairing)
+   v1: Aref Ruqaa (calligraphic, too informal)
+   v2: Tajawal (safe but generic)
+   v3: Reem Kufi (modern geometric Kufic) — chosen to match the brand's
+   "architectural luxury" thesis. Kufic is the architectural script of
+   Arabic; Reem Kufi (Aaron Bell, 2014) is a modern revival with rigorous
+   geometry. Pairs with Cormorant by contrast (rigid vs flowing). */
 html[lang="ar"]{
   --font-body: 'IBM Plex Sans Arabic','Segoe UI', system-ui, sans-serif;
-  --font-display: 'Aref Ruqaa', 'Amiri', 'IBM Plex Sans Arabic', serif;
+  --font-display: 'Reem Kufi', 'IBM Plex Sans Arabic', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --tracking-eyebrow: .14em;
 }
@@ -162,7 +173,7 @@ html[lang="ar"] .section-title{ font-weight: 700; }
   border-block-end: 1px solid transparent;
 }
 .nav.is-scrolled{
-  background: rgba(13,11,10,.72);
+  background: rgba(8,7,5,.72);
   backdrop-filter: blur(14px) saturate(120%);
   -webkit-backdrop-filter: blur(14px) saturate(120%);
   border-block-end-color: var(--hairline);
@@ -239,7 +250,7 @@ html[lang="ar"] .section-title{ font-weight: 700; }
 /* mobile menu overlay */
 .menu-overlay{
   position: fixed; inset: 0; z-index: calc(var(--z-nav) + 1);
-  background: rgba(11,9,8,.96);
+  background: rgba(8,7,5,.96);
   backdrop-filter: blur(20px);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   gap: 28px;
@@ -399,7 +410,7 @@ html[lang="ar"] .principle h3{ font-weight: 700; }
 .about__media img{ inline-size: 100%; block-size: auto; aspect-ratio: 9 / 13; object-fit: cover; }
 .about__media::after{
   content:""; position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(180deg, transparent 60%, rgba(11,9,8,.55) 100%);
+  background: linear-gradient(180deg, transparent 60%, rgba(8,7,5,.55) 100%);
 }
 
 .stats{
@@ -473,7 +484,7 @@ html[lang="en"] .stat__num{ font-style: italic; font-weight: 400; }
 }
 .project-card__media::after{
   content:""; position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(180deg, transparent 45%, rgba(11,9,8,.85) 100%);
+  background: linear-gradient(180deg, transparent 45%, rgba(8,7,5,.85) 100%);
   z-index: 1;
 }
 .project-card__meta{
@@ -498,10 +509,10 @@ html[lang="ar"] .project-card__title{ font-weight: 700; }
 .project-card__chev{
   position: absolute; inset-block-start: 18px; inset-inline-end: 18px; z-index: 2;
   inline-size: 38px; block-size: 38px; border-radius: var(--r-pill);
-  border: 1px solid rgba(241,236,227,.25);
+  border: 1px solid rgba(239,234,224,.25);
   display:flex; align-items:center; justify-content:center;
   color: var(--light);
-  background: rgba(13,11,10,.4);
+  background: rgba(8,7,5,.4);
   backdrop-filter: blur(4px);
   opacity:0; transform: translateY(-4px);
   transition: opacity var(--t) var(--ease), transform var(--t) var(--ease), border-color var(--t) var(--ease), background var(--t) var(--ease);
@@ -805,7 +816,7 @@ body.no-scroll{ overflow: hidden; }
   position: fixed; inset-block-start: 22px; inset-inline-end: 24px;
   inline-size: 48px; block-size: 48px; border-radius: var(--r-pill);
   border: 1px solid var(--hairline-strong);
-  background: rgba(13,11,10,.7); backdrop-filter: blur(10px);
+  background: rgba(8,7,5,.7); backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display:flex; align-items:center; justify-content:center;
   color: var(--light); z-index: 5;
@@ -827,7 +838,7 @@ body.no-scroll{ overflow: hidden; }
 }
 .case__hero::after{
   content:""; position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(180deg, rgba(11,9,8,.3) 0%, transparent 35%, rgba(11,9,8,.95) 100%);
+  background: linear-gradient(180deg, rgba(8,7,5,.3) 0%, transparent 35%, rgba(8,7,5,.95) 100%);
 }
 .case__hero-title{
   position: absolute; inset-inline-start: var(--sp-gutter); inset-block-end: 40px;
