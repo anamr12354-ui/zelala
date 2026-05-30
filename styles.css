@@ -296,7 +296,7 @@ html[lang="en"] .menu-overlay a{ font-style: italic; }
   margin: 0;
 }
 .hero__logo{
-  inline-size: clamp(280px, 38vw, 540px);
+  inline-size: clamp(240px, 32vw, 440px); /* square lockup (v2 logo) — keep balanced */
   block-size: auto;
   display: block;
   margin-inline: auto;
